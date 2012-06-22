@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>ERIZO: Main Page</title>
+<title>ERIZO: OneToManyProcessor.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -71,10 +71,10 @@ function toggleVisibility(linkObj) {
 </div>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li id="searchli">
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -93,6 +93,12 @@ function toggleVisibility(linkObj) {
       </li>
     </ul>
   </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
 </div>
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -104,18 +110,54 @@ function toggleVisibility(linkObj) {
   </div>
 </div>
 <script type="text/javascript">
-  initNavTree('index.html','');
+  initNavTree('OneToManyProcessor_8h.html','');
 </script>
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">ERIZO Documentation</div>  </div>
+<div class="title">OneToManyProcessor.h</div>  </div>
 </div>
 <div class="contents">
-</div>
+<a href="OneToManyProcessor_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
+<a name="l00002"></a>00002 <span class="comment"> * OneToManyProcessor.h</span>
+<a name="l00003"></a>00003 <span class="comment"> */</span>
+<a name="l00004"></a>00004 
+<a name="l00005"></a>00005 <span class="preprocessor">#ifndef ONETOMANYPROCESSOR_H_</span>
+<a name="l00006"></a>00006 <span class="preprocessor"></span><span class="preprocessor">#define ONETOMANYPROCESSOR_H_</span>
+<a name="l00007"></a>00007 <span class="preprocessor"></span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;map&gt;</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="MediaDefinitions_8h.html">MediaDefinitions.h</a>&quot;</span>
+<a name="l00011"></a>00011 
+<a name="l00012"></a>00012 <span class="keyword">namespace </span>erizo{
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014 <span class="keyword">class </span>WebRtcConnection;
+<a name="l00015"></a>00015 
+<a name="l00016"></a><a class="code" href="classerizo_1_1OneToManyProcessor.html">00016</a> <span class="keyword">class </span><a class="code" href="classerizo_1_1OneToManyProcessor.html">OneToManyProcessor</a> : <span class="keyword">public</span> <a class="code" href="classerizo_1_1MediaReceiver.html" title="A MediaReceiver is any class that can receive audio or video data.">MediaReceiver</a> {
+<a name="l00017"></a>00017 <span class="keyword">public</span>:
+<a name="l00018"></a>00018         <a class="code" href="classerizo_1_1OneToManyProcessor.html#aef2b16a2a34012d86626fd1a3d472c7c">OneToManyProcessor</a>();
+<a name="l00019"></a>00019         <span class="keyword">virtual</span> <a class="code" href="classerizo_1_1OneToManyProcessor.html#a6d9f74c0f7c4ace31845ffc2fba8afcd">~OneToManyProcessor</a>();
+<a name="l00020"></a>00020         <span class="keywordtype">void</span> <a class="code" href="classerizo_1_1OneToManyProcessor.html#ae133706322229c6c1747694fd9aaaae7">setPublisher</a>(<a class="code" href="classerizo_1_1WebRtcConnection.html" title="A WebRTC Connection.">WebRtcConnection</a>* webRtcConn);
+<a name="l00021"></a>00021         <span class="keywordtype">void</span> <a class="code" href="classerizo_1_1OneToManyProcessor.html#afe9e70c313472fea0351ae5fa3ea5b22">addSubscriber</a>(<a class="code" href="classerizo_1_1WebRtcConnection.html" title="A WebRTC Connection.">WebRtcConnection</a>* webRtcConn, <span class="keywordtype">int</span> peerId);
+<a name="l00022"></a>00022         <span class="keywordtype">void</span> <a class="code" href="classerizo_1_1OneToManyProcessor.html#ab577457a3008f2e074046f10b2eb1e24">removeSubscriber</a>(<span class="keywordtype">int</span> peerId);
+<a name="l00023"></a>00023         <span class="keywordtype">int</span> <a class="code" href="classerizo_1_1OneToManyProcessor.html#a11831344d667d011fe06a69dcd2a98bf">receiveAudioData</a>(<span class="keywordtype">char</span>* buf, <span class="keywordtype">int</span> len);
+<a name="l00024"></a>00024         <span class="keywordtype">int</span> <a class="code" href="classerizo_1_1OneToManyProcessor.html#a4a2f98e8b09d3165d2a3b01132257b8b">receiveVideoData</a>(<span class="keywordtype">char</span>* buf, <span class="keywordtype">int</span> len);
+<a name="l00025"></a>00025 
+<a name="l00026"></a><a class="code" href="classerizo_1_1OneToManyProcessor.html#a3252da35dcfe182433b6707520e22ff7">00026</a>         <a class="code" href="classerizo_1_1WebRtcConnection.html" title="A WebRTC Connection.">WebRtcConnection</a> *<a class="code" href="classerizo_1_1OneToManyProcessor.html#a3252da35dcfe182433b6707520e22ff7">publisher</a>;
+<a name="l00027"></a><a class="code" href="classerizo_1_1OneToManyProcessor.html#a80d7a4cf2b5a804672ec401f8d2de02f">00027</a>         std::map&lt;int, WebRtcConnection*&gt; <a class="code" href="classerizo_1_1OneToManyProcessor.html#a80d7a4cf2b5a804672ec401f8d2de02f">subscribers</a>;
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 <span class="keyword">private</span>:
+<a name="l00030"></a>00030         <span class="keywordtype">char</span>* sendVideoBuffer_;
+<a name="l00031"></a>00031         <span class="keywordtype">char</span>* sendAudioBuffer_;
+<a name="l00032"></a>00032 };
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 } <span class="comment">/* namespace erizo */</span>
+<a name="l00035"></a>00035 <span class="preprocessor">#endif </span><span class="comment">/* ONETOMANYPROCESSOR_H_ */</span>
+</pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
+      <li class="navelem"><a class="el" href="OneToManyProcessor_8h.html">OneToManyProcessor.h</a>      </li>
       <li class="footer">Generated on Fri Jun 22 2012 16:45:27 for ERIZO by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>

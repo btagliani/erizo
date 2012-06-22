@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>ERIZO: Main Page</title>
+<title>ERIZO: NiceConnection.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -71,10 +71,10 @@ function toggleVisibility(linkObj) {
 </div>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li id="searchli">
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -93,6 +93,12 @@ function toggleVisibility(linkObj) {
       </li>
     </ul>
   </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
 </div>
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -104,18 +110,70 @@ function toggleVisibility(linkObj) {
   </div>
 </div>
 <script type="text/javascript">
-  initNavTree('index.html','');
+  initNavTree('NiceConnection_8h.html','');
 </script>
 <div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
-<div class="title">ERIZO Documentation</div>  </div>
+<div class="title">NiceConnection.h File Reference</div>  </div>
 </div>
 <div class="contents">
+<div class="textblock"><code>#include &lt;string&gt;</code><br/>
+<code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;boost/thread.hpp&gt;</code><br/>
+<code>#include &quot;<a class="el" href="MediaDefinitions_8h_source.html">MediaDefinitions.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="SdpInfo_8h_source.html">SdpInfo.h</a>&quot;</code><br/>
+</div>
+<p><a href="NiceConnection_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classerizo_1_1NiceConnection.html">erizo::NiceConnection</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">An ICE connection via libNice Represents an ICE Connection in an new thread.  <a href="classerizo_1_1NiceConnection.html#details">More...</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceerizo.html">erizo</a></td></tr>
+<tr><td colspan="2"><h2><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef struct _NiceAgent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NiceConnection_8h.html#a27eb0369d646fce15b98e243696cd0b6">NiceAgent</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef struct _GMainLoop&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NiceConnection_8h.html#a3ead78d8af9314b69b993ba395806890">GMainLoop</a></td></tr>
+</table>
+<hr/><h2>Typedef Documentation</h2>
+<a class="anchor" id="a3ead78d8af9314b69b993ba395806890"></a><!-- doxytag: member="NiceConnection.h::GMainLoop" ref="a3ead78d8af9314b69b993ba395806890" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct _GMainLoop <a class="el" href="NiceConnection_8h.html#a3ead78d8af9314b69b993ba395806890">GMainLoop</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a27eb0369d646fce15b98e243696cd0b6"></a><!-- doxytag: member="NiceConnection.h::NiceAgent" ref="a27eb0369d646fce15b98e243696cd0b6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct _NiceAgent <a class="el" href="NiceConnection_8h.html#a27eb0369d646fce15b98e243696cd0b6">NiceAgent</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 </div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
+      <li class="navelem"><a class="el" href="NiceConnection_8h.html">NiceConnection.h</a>      </li>
       <li class="footer">Generated on Fri Jun 22 2012 16:45:27 for ERIZO by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>

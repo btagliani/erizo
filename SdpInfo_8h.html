@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>ERIZO: Main Page</title>
+<title>ERIZO: SdpInfo.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -71,10 +71,10 @@ function toggleVisibility(linkObj) {
 </div>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li id="searchli">
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -93,6 +93,12 @@ function toggleVisibility(linkObj) {
       </li>
     </ul>
   </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
 </div>
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -104,18 +110,53 @@ function toggleVisibility(linkObj) {
   </div>
 </div>
 <script type="text/javascript">
-  initNavTree('index.html','');
+  initNavTree('SdpInfo_8h.html','');
 </script>
 <div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
-<div class="title">ERIZO Documentation</div>  </div>
+<div class="title">SdpInfo.h File Reference</div>  </div>
 </div>
 <div class="contents">
+<div class="textblock"><code>#include &lt;string&gt;</code><br/>
+<code>#include &lt;vector&gt;</code><br/>
+</div>
+<p><a href="SdpInfo_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classerizo_1_1CryptoInfo.html">erizo::CryptoInfo</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">SRTP info.  <a href="classerizo_1_1CryptoInfo.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classerizo_1_1CandidateInfo.html">erizo::CandidateInfo</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the information of an ICE Candidate.  <a href="classerizo_1_1CandidateInfo.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classerizo_1_1SdpInfo.html">erizo::SdpInfo</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the information of a single SDP.  <a href="classerizo_1_1SdpInfo.html#details">More...</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceerizo.html">erizo</a></td></tr>
+<tr><td colspan="2"><h2><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceerizo.html#ae71293f825080a60ac826519645b6cea">erizo::HostType</a> { <a class="el" href="namespaceerizo.html#ae71293f825080a60ac826519645b6ceaaad054cd5fa20c4dfdf6a7b84a48016dd">erizo::HOST</a>, 
+<a class="el" href="namespaceerizo.html#ae71293f825080a60ac826519645b6ceaaf05946bbd1a2b97ed521222e9e8940d3">erizo::SRLFX</a>, 
+<a class="el" href="namespaceerizo.html#ae71293f825080a60ac826519645b6ceaaa177fb210138f75029c80f996efc1dde">erizo::PRFLX</a>, 
+<a class="el" href="namespaceerizo.html#ae71293f825080a60ac826519645b6ceaa0f660ed4cc37fd7f2c73d30d4cd12c83">erizo::RELAY</a>
+ }</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ICE candidate types.  <a href="namespaceerizo.html#ae71293f825080a60ac826519645b6cea">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceerizo.html#aea65e818bea8a0ed842ab23502fc3d94">erizo::MediaType</a> { <a class="el" href="namespaceerizo.html#aea65e818bea8a0ed842ab23502fc3d94ad06e87aa7ac3e024ff41aee86b962c53">erizo::VIDEO_TYPE</a>, 
+<a class="el" href="namespaceerizo.html#aea65e818bea8a0ed842ab23502fc3d94afe058ae349cbd164c673dff57664aedb">erizo::AUDIO_TYPE</a>, 
+<a class="el" href="namespaceerizo.html#aea65e818bea8a0ed842ab23502fc3d94abd8634fce9a9f9d9f57cb8561b4b1897">erizo::OTHER</a>
+ }</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Channel types.  <a href="namespaceerizo.html#aea65e818bea8a0ed842ab23502fc3d94">More...</a><br/></td></tr>
+</table>
 </div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
+      <li class="navelem"><a class="el" href="SdpInfo_8h.html">SdpInfo.h</a>      </li>
       <li class="footer">Generated on Fri Jun 22 2012 16:45:27 for ERIZO by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
