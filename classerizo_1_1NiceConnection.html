@@ -117,7 +117,6 @@ function toggleVisibility(linkObj) {
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a>  </div>
   <div class="headertitle">
@@ -132,17 +131,6 @@ function toggleVisibility(linkObj) {
 
 <p><a href="classerizo_1_1NiceConnection-members.html">List of all members.</a></p>
 <table class="memberdecls">
-<tr><td colspan="2"><h2><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classerizo_1_1NiceConnection.html#ad0f78eb8a7cf7321d908e1bff2f36c59">IceState</a> { <br/>
-&#160;&#160;<a class="el" href="classerizo_1_1NiceConnection.html#ad0f78eb8a7cf7321d908e1bff2f36c59a2306b1008c79d2c1e35b648181888281">INITIAL</a>, 
-<a class="el" href="classerizo_1_1NiceConnection.html#ad0f78eb8a7cf7321d908e1bff2f36c59ac19270e19ab2495905c39a45b974620c">CANDIDATES_GATHERED</a>, 
-<a class="el" href="classerizo_1_1NiceConnection.html#ad0f78eb8a7cf7321d908e1bff2f36c59a1102f10a761e11de037c59c999b9abf3">CANDIDATES_RECEIVED</a>, 
-<a class="el" href="classerizo_1_1NiceConnection.html#ad0f78eb8a7cf7321d908e1bff2f36c59ac9676b0ffbe7a96bd1cfe817993a9e68">READY</a>, 
-<br/>
-&#160;&#160;<a class="el" href="classerizo_1_1NiceConnection.html#ad0f78eb8a7cf7321d908e1bff2f36c59a51bfbe76857c33b75c4b87b035277e37">FINISHED</a>
-<br/>
- }</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classerizo_1_1NiceConnection.html#aafb71005309dddece618f4de3f16ed5b">NiceConnection</a> (<a class="el" href="namespaceerizo.html#aea65e818bea8a0ed842ab23502fc3d94">MediaType</a> med, const std::string &amp;<a class="el" href="classerizo_1_1NiceConnection.html#a6af8df1bdc36c4e96208cd140dd5d1aa">transportName</a>)</td></tr>
@@ -162,48 +150,21 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the associated WebRTCConnection.  <a href="#a730edce6e46f10bd33751b913d5071c0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classerizo_1_1NiceConnection.html#a9e445cb17e5d2cc8abf055aa20d713fd">sendData</a> (void *buf, int len)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends data via the ICE Connection.  <a href="#a9e445cb17e5d2cc8abf055aa20d713fd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classerizo_1_1NiceConnection.html#aeb4bccb404c0728d42ad7962e793ad17">updateIceState</a> (<a class="el" href="namespaceerizo.html#a123302796ddc186255462e85eb7efbe4">IceState</a> state)</td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceerizo.html#aea65e818bea8a0ed842ab23502fc3d94">MediaType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classerizo_1_1NiceConnection.html#a2b8e182b625b689fab45d5a1d4741791">mediaType</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The MediaType of the connection.  <a href="#a2b8e182b625b689fab45d5a1d4741791"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classerizo_1_1NiceConnection.html#a6af8df1bdc36c4e96208cd140dd5d1aa">transportName</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The transport name.  <a href="#a6af8df1bdc36c4e96208cd140dd5d1aa"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classerizo_1_1NiceConnection.html#ad0f78eb8a7cf7321d908e1bff2f36c59">IceState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classerizo_1_1NiceConnection.html#a0fd7da1a62deae71f6f3407d01887f7e">iceState</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceerizo.html#a123302796ddc186255462e85eb7efbe4">IceState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classerizo_1_1NiceConnection.html#a0fd7da1a62deae71f6f3407d01887f7e">iceState</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The state of the ice Connection.  <a href="#a0fd7da1a62deae71f6f3407d01887f7e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classerizo_1_1CandidateInfo.html">CandidateInfo</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classerizo_1_1NiceConnection.html#a23eff29b943707e8890d7f00a51a81dc">localCandidates</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The Obtained local candidates.  <a href="#a23eff29b943707e8890d7f00a51a81dc"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>An ICE connection via libNice Represents an ICE Connection in an new thread. </p>
-</div><hr/><h2>Member Enumeration Documentation</h2>
-<a class="anchor" id="ad0f78eb8a7cf7321d908e1bff2f36c59"></a><!-- doxytag: member="erizo::NiceConnection::IceState" ref="ad0f78eb8a7cf7321d908e1bff2f36c59" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="classerizo_1_1NiceConnection.html#ad0f78eb8a7cf7321d908e1bff2f36c59">erizo::NiceConnection::IceState</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em><a class="anchor" id="ad0f78eb8a7cf7321d908e1bff2f36c59a2306b1008c79d2c1e35b648181888281"></a><!-- doxytag: member="INITIAL" ref="ad0f78eb8a7cf7321d908e1bff2f36c59a2306b1008c79d2c1e35b648181888281" args="" -->INITIAL</em>&nbsp;</td><td>
-</td></tr>
-<tr><td valign="top"><em><a class="anchor" id="ad0f78eb8a7cf7321d908e1bff2f36c59ac19270e19ab2495905c39a45b974620c"></a><!-- doxytag: member="CANDIDATES_GATHERED" ref="ad0f78eb8a7cf7321d908e1bff2f36c59ac19270e19ab2495905c39a45b974620c" args="" -->CANDIDATES_GATHERED</em>&nbsp;</td><td>
-</td></tr>
-<tr><td valign="top"><em><a class="anchor" id="ad0f78eb8a7cf7321d908e1bff2f36c59a1102f10a761e11de037c59c999b9abf3"></a><!-- doxytag: member="CANDIDATES_RECEIVED" ref="ad0f78eb8a7cf7321d908e1bff2f36c59a1102f10a761e11de037c59c999b9abf3" args="" -->CANDIDATES_RECEIVED</em>&nbsp;</td><td>
-</td></tr>
-<tr><td valign="top"><em><a class="anchor" id="ad0f78eb8a7cf7321d908e1bff2f36c59ac9676b0ffbe7a96bd1cfe817993a9e68"></a><!-- doxytag: member="READY" ref="ad0f78eb8a7cf7321d908e1bff2f36c59ac9676b0ffbe7a96bd1cfe817993a9e68" args="" -->READY</em>&nbsp;</td><td>
-</td></tr>
-<tr><td valign="top"><em><a class="anchor" id="ad0f78eb8a7cf7321d908e1bff2f36c59a51bfbe76857c33b75c4b87b035277e37"></a><!-- doxytag: member="FINISHED" ref="ad0f78eb8a7cf7321d908e1bff2f36c59a51bfbe76857c33b75c4b87b035277e37" args="" -->FINISHED</em>&nbsp;</td><td>
-</td></tr>
-</table>
-</dd>
-</dl>
-
-</div>
-</div>
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aafb71005309dddece618f4de3f16ed5b"></a><!-- doxytag: member="erizo::NiceConnection::NiceConnection" ref="aafb71005309dddece618f4de3f16ed5b" args="(MediaType med, const std::string &amp;transportName)" -->
 <div class="memitem">
 <div class="memproto">
@@ -419,13 +380,30 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aeb4bccb404c0728d42ad7962e793ad17"></a><!-- doxytag: member="erizo::NiceConnection::updateIceState" ref="aeb4bccb404c0728d42ad7962e793ad17" args="(IceState state)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void erizo::NiceConnection::updateIceState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceerizo.html#a123302796ddc186255462e85eb7efbe4">IceState</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <hr/><h2>Member Data Documentation</h2>
 <a class="anchor" id="a0fd7da1a62deae71f6f3407d01887f7e"></a><!-- doxytag: member="erizo::NiceConnection::iceState" ref="a0fd7da1a62deae71f6f3407d01887f7e" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classerizo_1_1NiceConnection.html#ad0f78eb8a7cf7321d908e1bff2f36c59">IceState</a> <a class="el" href="classerizo_1_1NiceConnection.html#a0fd7da1a62deae71f6f3407d01887f7e">erizo::NiceConnection::iceState</a></td>
+          <td class="memname"><a class="el" href="namespaceerizo.html#a123302796ddc186255462e85eb7efbe4">IceState</a> <a class="el" href="classerizo_1_1NiceConnection.html#a0fd7da1a62deae71f6f3407d01887f7e">erizo::NiceConnection::iceState</a></td>
         </tr>
       </table>
 </div>
@@ -490,7 +468,7 @@ Public Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="namespaceerizo.html">erizo</a>      </li>
       <li class="navelem"><a class="el" href="classerizo_1_1NiceConnection.html">NiceConnection</a>      </li>
-      <li class="footer">Generated on Mon Jun 25 2012 13:12:11 for ERIZO by&#160;
+      <li class="footer">Generated on Wed Jul 18 2012 17:15:09 for ERIZO by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -500,7 +478,7 @@ Public Attributes</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">

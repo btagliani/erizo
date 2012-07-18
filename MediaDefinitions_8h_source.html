@@ -129,27 +129,32 @@ function toggleVisibility(linkObj) {
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="keyword">class </span><a class="code" href="classerizo_1_1NiceConnection.html" title="An ICE connection via libNice Represents an ICE Connection in an new thread.">NiceConnection</a>;
 <a name="l00011"></a>00011 
-<a name="l00015"></a><a class="code" href="classerizo_1_1MediaReceiver.html">00015</a> <span class="keyword">class </span><a class="code" href="classerizo_1_1MediaReceiver.html" title="A MediaReceiver is any class that can receive audio or video data.">MediaReceiver</a>{
-<a name="l00016"></a>00016 <span class="keyword">public</span>:
-<a name="l00017"></a>00017         <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classerizo_1_1MediaReceiver.html#a00bfb6ff7b0a0b8f2bda5a082d72c854">receiveAudioData</a>(<span class="keywordtype">char</span>* buf, <span class="keywordtype">int</span> len)=0;
-<a name="l00018"></a>00018         <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classerizo_1_1MediaReceiver.html#aa33dcdf21edd84ae85463b77e53a4d3e">receiveVideoData</a>(<span class="keywordtype">char</span>* buf, <span class="keywordtype">int</span> len)=0;
-<a name="l00019"></a><a class="code" href="classerizo_1_1MediaReceiver.html#a16a49b43564c01f9781a31822fd4ae9b">00019</a>         <span class="keyword">virtual</span> <a class="code" href="classerizo_1_1MediaReceiver.html#a16a49b43564c01f9781a31822fd4ae9b">~MediaReceiver</a>(){};
-<a name="l00020"></a>00020 };
-<a name="l00024"></a><a class="code" href="classerizo_1_1NiceReceiver.html">00024</a> <span class="keyword">class </span><a class="code" href="classerizo_1_1NiceReceiver.html" title="A NiceReceiver is any class that can receive data from a nice connection.">NiceReceiver</a>{
-<a name="l00025"></a>00025 <span class="keyword">public</span>:
-<a name="l00026"></a>00026         <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classerizo_1_1NiceReceiver.html#a656702c7b11ecf7a6329e1a86ddfe0cc">receiveNiceData</a>(<span class="keywordtype">char</span>* buf, <span class="keywordtype">int</span> len, <a class="code" href="classerizo_1_1NiceConnection.html" title="An ICE connection via libNice Represents an ICE Connection in an new thread.">NiceConnection</a>* nice)=0;
-<a name="l00027"></a><a class="code" href="classerizo_1_1NiceReceiver.html#a177c76fa43780157b08a35ef12829d8a">00027</a>         <span class="keyword">virtual</span> <a class="code" href="classerizo_1_1NiceReceiver.html#a177c76fa43780157b08a35ef12829d8a">~NiceReceiver</a>(){};
-<a name="l00028"></a>00028 };
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030 } <span class="comment">/* namespace erizo */</span>
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032 <span class="preprocessor">#endif </span><span class="comment">/* MEDIADEFINITIONS_H_ */</span>
+<a name="l00012"></a><a class="code" href="structerizo_1_1packet.html">00012</a> <span class="keyword">struct </span><a class="code" href="structerizo_1_1packet.html">packet</a>{
+<a name="l00013"></a><a class="code" href="structerizo_1_1packet.html#a04fe1b3094c3fbfa515b2bb89ed273b0">00013</a>         <span class="keywordtype">char</span> <a class="code" href="structerizo_1_1packet.html#a04fe1b3094c3fbfa515b2bb89ed273b0">data</a>[1200];
+<a name="l00014"></a><a class="code" href="structerizo_1_1packet.html#acb3318456293c1a06308863b285931f8">00014</a>         <span class="keywordtype">int</span> <a class="code" href="structerizo_1_1packet.html#acb3318456293c1a06308863b285931f8">length</a>;
+<a name="l00015"></a>00015 };
+<a name="l00016"></a>00016 
+<a name="l00020"></a><a class="code" href="classerizo_1_1MediaReceiver.html">00020</a> <span class="keyword">class </span><a class="code" href="classerizo_1_1MediaReceiver.html" title="A MediaReceiver is any class that can receive audio or video data.">MediaReceiver</a>{
+<a name="l00021"></a>00021 <span class="keyword">public</span>:
+<a name="l00022"></a>00022         <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classerizo_1_1MediaReceiver.html#a00bfb6ff7b0a0b8f2bda5a082d72c854">receiveAudioData</a>(<span class="keywordtype">char</span>* buf, <span class="keywordtype">int</span> len)=0;
+<a name="l00023"></a>00023         <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classerizo_1_1MediaReceiver.html#aa33dcdf21edd84ae85463b77e53a4d3e">receiveVideoData</a>(<span class="keywordtype">char</span>* buf, <span class="keywordtype">int</span> len)=0;
+<a name="l00024"></a><a class="code" href="classerizo_1_1MediaReceiver.html#a16a49b43564c01f9781a31822fd4ae9b">00024</a>         <span class="keyword">virtual</span> <a class="code" href="classerizo_1_1MediaReceiver.html#a16a49b43564c01f9781a31822fd4ae9b">~MediaReceiver</a>(){};
+<a name="l00025"></a>00025 };
+<a name="l00029"></a><a class="code" href="classerizo_1_1NiceReceiver.html">00029</a> <span class="keyword">class </span><a class="code" href="classerizo_1_1NiceReceiver.html" title="A NiceReceiver is any class that can receive data from a nice connection.">NiceReceiver</a>{
+<a name="l00030"></a>00030 <span class="keyword">public</span>:
+<a name="l00031"></a>00031         <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classerizo_1_1NiceReceiver.html#a656702c7b11ecf7a6329e1a86ddfe0cc">receiveNiceData</a>(<span class="keywordtype">char</span>* buf, <span class="keywordtype">int</span> len, <a class="code" href="classerizo_1_1NiceConnection.html" title="An ICE connection via libNice Represents an ICE Connection in an new thread.">NiceConnection</a>* nice)=0;
+<a name="l00032"></a><a class="code" href="classerizo_1_1NiceReceiver.html#a177c76fa43780157b08a35ef12829d8a">00032</a>         <span class="keyword">virtual</span> <a class="code" href="classerizo_1_1NiceReceiver.html#a177c76fa43780157b08a35ef12829d8a">~NiceReceiver</a>(){};
+<a name="l00033"></a>00033 };
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 } <span class="comment">/* namespace erizo */</span>
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037 <span class="preprocessor">#endif </span><span class="comment">/* MEDIADEFINITIONS_H_ */</span>
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="MediaDefinitions_8h.html">MediaDefinitions.h</a>      </li>
-      <li class="footer">Generated on Mon Jun 25 2012 13:12:11 for ERIZO by&#160;
+      <li class="footer">Generated on Wed Jul 18 2012 17:15:09 for ERIZO by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -159,7 +164,7 @@ function toggleVisibility(linkObj) {
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">

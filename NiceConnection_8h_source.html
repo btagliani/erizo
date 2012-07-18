@@ -131,50 +131,53 @@ function toggleVisibility(linkObj) {
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="MediaDefinitions_8h.html">MediaDefinitions.h</a>&quot;</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="SdpInfo_8h.html">SdpInfo.h</a>&quot;</span>
-<a name="l00014"></a>00014 
-<a name="l00015"></a><a class="code" href="NiceConnection_8h.html#a27eb0369d646fce15b98e243696cd0b6">00015</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>_NiceAgent <a class="code" href="NiceConnection_8h.html#a27eb0369d646fce15b98e243696cd0b6">NiceAgent</a>;
-<a name="l00016"></a><a class="code" href="NiceConnection_8h.html#a3ead78d8af9314b69b993ba395806890">00016</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>_GMainLoop <a class="code" href="NiceConnection_8h.html#a3ead78d8af9314b69b993ba395806890">GMainLoop</a>;
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="keyword">namespace </span>erizo {
-<a name="l00019"></a>00019 <span class="comment">//forward declarations</span>
-<a name="l00020"></a>00020 <span class="keyword">struct </span>CandidateInfo;
-<a name="l00021"></a>00021 <span class="keyword">class </span>WebRtcConnection;
-<a name="l00027"></a><a class="code" href="classerizo_1_1NiceConnection.html">00027</a> <span class="keyword">class </span><a class="code" href="classerizo_1_1NiceConnection.html" title="An ICE connection via libNice Represents an ICE Connection in an new thread.">NiceConnection</a> {
-<a name="l00028"></a>00028 <span class="keyword">public</span>:
-<a name="l00029"></a><a class="code" href="classerizo_1_1NiceConnection.html#ad0f78eb8a7cf7321d908e1bff2f36c59">00029</a>         <span class="keyword">enum</span> <a class="code" href="classerizo_1_1NiceConnection.html#ad0f78eb8a7cf7321d908e1bff2f36c59">IceState</a> {
-<a name="l00030"></a><a class="code" href="classerizo_1_1NiceConnection.html#ad0f78eb8a7cf7321d908e1bff2f36c59ac9676b0ffbe7a96bd1cfe817993a9e68">00030</a>                 <a class="code" href="classerizo_1_1NiceConnection.html#ad0f78eb8a7cf7321d908e1bff2f36c59a2306b1008c79d2c1e35b648181888281">INITIAL</a>, <a class="code" href="classerizo_1_1NiceConnection.html#ad0f78eb8a7cf7321d908e1bff2f36c59ac19270e19ab2495905c39a45b974620c">CANDIDATES_GATHERED</a>, <a class="code" href="classerizo_1_1NiceConnection.html#ad0f78eb8a7cf7321d908e1bff2f36c59a1102f10a761e11de037c59c999b9abf3">CANDIDATES_RECEIVED</a>, <a class="code" href="classerizo_1_1NiceConnection.html#ad0f78eb8a7cf7321d908e1bff2f36c59ac9676b0ffbe7a96bd1cfe817993a9e68">READY</a>, <a class="code" href="classerizo_1_1NiceConnection.html#ad0f78eb8a7cf7321d908e1bff2f36c59a51bfbe76857c33b75c4b87b035277e37">FINISHED</a>
-<a name="l00031"></a>00031         };
-<a name="l00037"></a>00037         <a class="code" href="classerizo_1_1NiceConnection.html#aafb71005309dddece618f4de3f16ed5b" title="Constructs a new NiceConnection.">NiceConnection</a>(<a class="code" href="namespaceerizo.html#aea65e818bea8a0ed842ab23502fc3d94" title="Channel types.">MediaType</a> med, <span class="keyword">const</span> std::string &amp;<a class="code" href="classerizo_1_1NiceConnection.html#a6af8df1bdc36c4e96208cd140dd5d1aa" title="The transport name.">transportName</a>);
-<a name="l00038"></a>00038         <span class="keyword">virtual</span> <a class="code" href="classerizo_1_1NiceConnection.html#a2b0f38a786b1d8258b656d5d57ec4301">~NiceConnection</a>();
-<a name="l00042"></a>00042         <span class="keywordtype">void</span> <a class="code" href="classerizo_1_1NiceConnection.html#a5f2b5d21a5dcd69061e132cf8bc6ea04" title="Join to the internal thread of the NiceConnection.">join</a>();
-<a name="l00046"></a>00046         <span class="keywordtype">void</span> <a class="code" href="classerizo_1_1NiceConnection.html#a5b5d29b21440733e46c194eec6982a53" title="Starts Gathering candidates in a new thread.">start</a>();
-<a name="l00050"></a>00050         <span class="keywordtype">void</span> <a class="code" href="classerizo_1_1NiceConnection.html#afa219f84a1620bd0e24ecdc4b45f74e7" title="Closes the connection.">close</a>();
-<a name="l00055"></a>00055         <a class="code" href="classerizo_1_1WebRtcConnection.html" title="A WebRTC Connection.">WebRtcConnection</a>* <a class="code" href="classerizo_1_1NiceConnection.html#ae2d1e7b2395280f860ce8a5ccad00d74" title="Obtains the associated WebRtcConnection.">getWebRtcConnection</a>();
-<a name="l00061"></a>00061         <span class="keywordtype">bool</span> <a class="code" href="classerizo_1_1NiceConnection.html#ab8229fd03ba8f9164bf1d0116afc34ad" title="Sets the remote ICE Candidates.">setRemoteCandidates</a>(std::vector&lt;CandidateInfo&gt; &amp;candidates);
-<a name="l00066"></a>00066         <span class="keywordtype">void</span> <a class="code" href="classerizo_1_1NiceConnection.html#a730edce6e46f10bd33751b913d5071c0" title="Sets the associated WebRTCConnection.">setWebRtcConnection</a>(<a class="code" href="classerizo_1_1WebRtcConnection.html" title="A WebRTC Connection.">WebRtcConnection</a> *connection);
-<a name="l00073"></a>00073         <span class="keywordtype">int</span> <a class="code" href="classerizo_1_1NiceConnection.html#a9e445cb17e5d2cc8abf055aa20d713fd" title="Sends data via the ICE Connection.">sendData</a>(<span class="keywordtype">void</span>* buf, <span class="keywordtype">int</span> len);
-<a name="l00074"></a>00074 
-<a name="l00078"></a><a class="code" href="classerizo_1_1NiceConnection.html#a2b8e182b625b689fab45d5a1d4741791">00078</a>         <a class="code" href="namespaceerizo.html#aea65e818bea8a0ed842ab23502fc3d94" title="Channel types.">MediaType</a> <a class="code" href="classerizo_1_1NiceConnection.html#a2b8e182b625b689fab45d5a1d4741791" title="The MediaType of the connection.">mediaType</a>;
-<a name="l00082"></a><a class="code" href="classerizo_1_1NiceConnection.html#a6af8df1bdc36c4e96208cd140dd5d1aa">00082</a>         std::string *<a class="code" href="classerizo_1_1NiceConnection.html#a6af8df1bdc36c4e96208cd140dd5d1aa" title="The transport name.">transportName</a>;
-<a name="l00086"></a><a class="code" href="classerizo_1_1NiceConnection.html#a0fd7da1a62deae71f6f3407d01887f7e">00086</a>         <a class="code" href="classerizo_1_1NiceConnection.html#ad0f78eb8a7cf7321d908e1bff2f36c59">IceState</a> <a class="code" href="classerizo_1_1NiceConnection.html#a0fd7da1a62deae71f6f3407d01887f7e" title="The state of the ice Connection.">iceState</a>;
-<a name="l00090"></a><a class="code" href="classerizo_1_1NiceConnection.html#a23eff29b943707e8890d7f00a51a81dc">00090</a>         std::vector&lt;CandidateInfo&gt;* <a class="code" href="classerizo_1_1NiceConnection.html#a23eff29b943707e8890d7f00a51a81dc" title="The Obtained local candidates.">localCandidates</a>;
-<a name="l00091"></a>00091 
-<a name="l00092"></a>00092 <span class="keyword">private</span>:
-<a name="l00093"></a>00093         <span class="keywordtype">void</span> init();
-<a name="l00094"></a>00094         <a class="code" href="NiceConnection_8h.html#a27eb0369d646fce15b98e243696cd0b6">NiceAgent</a>* agent_;
-<a name="l00095"></a>00095         <a class="code" href="classerizo_1_1WebRtcConnection.html" title="A WebRTC Connection.">WebRtcConnection</a>* conn_;
-<a name="l00096"></a>00096         <a class="code" href="NiceConnection_8h.html#a3ead78d8af9314b69b993ba395806890">GMainLoop</a>* loop_;
-<a name="l00097"></a>00097         boost::thread m_Thread_;
-<a name="l00098"></a>00098 };
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100 } <span class="comment">/* namespace erizo */</span>
-<a name="l00101"></a>00101 <span class="preprocessor">#endif </span><span class="comment">/* NICECONNECTION_H_ */</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="WebRtcConnection_8h.html">WebRtcConnection.h</a>&quot;</span>
+<a name="l00015"></a>00015 
+<a name="l00016"></a><a class="code" href="NiceConnection_8h.html#a27eb0369d646fce15b98e243696cd0b6">00016</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>_NiceAgent <a class="code" href="NiceConnection_8h.html#a27eb0369d646fce15b98e243696cd0b6">NiceAgent</a>;
+<a name="l00017"></a><a class="code" href="NiceConnection_8h.html#a3ead78d8af9314b69b993ba395806890">00017</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>_GMainLoop <a class="code" href="NiceConnection_8h.html#a3ead78d8af9314b69b993ba395806890">GMainLoop</a>;
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 <span class="keyword">namespace </span>erizo {
+<a name="l00020"></a>00020 <span class="comment">//forward declarations</span>
+<a name="l00021"></a>00021 <span class="keyword">struct </span>CandidateInfo;
+<a name="l00022"></a>00022 <span class="keyword">class </span>WebRtcConnection;
+<a name="l00028"></a><a class="code" href="classerizo_1_1NiceConnection.html">00028</a> <span class="keyword">class </span><a class="code" href="classerizo_1_1NiceConnection.html" title="An ICE connection via libNice Represents an ICE Connection in an new thread.">NiceConnection</a> {
+<a name="l00029"></a>00029 <span class="keyword">public</span>:
+<a name="l00030"></a>00030 
+<a name="l00036"></a>00036         <a class="code" href="classerizo_1_1NiceConnection.html#aafb71005309dddece618f4de3f16ed5b" title="Constructs a new NiceConnection.">NiceConnection</a>(<a class="code" href="namespaceerizo.html#aea65e818bea8a0ed842ab23502fc3d94" title="Channel types.">MediaType</a> med, <span class="keyword">const</span> std::string &amp;<a class="code" href="classerizo_1_1NiceConnection.html#a6af8df1bdc36c4e96208cd140dd5d1aa" title="The transport name.">transportName</a>);
+<a name="l00037"></a>00037         <span class="keyword">virtual</span> <a class="code" href="classerizo_1_1NiceConnection.html#a2b0f38a786b1d8258b656d5d57ec4301">~NiceConnection</a>();
+<a name="l00041"></a>00041         <span class="keywordtype">void</span> <a class="code" href="classerizo_1_1NiceConnection.html#a5f2b5d21a5dcd69061e132cf8bc6ea04" title="Join to the internal thread of the NiceConnection.">join</a>();
+<a name="l00045"></a>00045         <span class="keywordtype">void</span> <a class="code" href="classerizo_1_1NiceConnection.html#a5b5d29b21440733e46c194eec6982a53" title="Starts Gathering candidates in a new thread.">start</a>();
+<a name="l00049"></a>00049         <span class="keywordtype">void</span> <a class="code" href="classerizo_1_1NiceConnection.html#afa219f84a1620bd0e24ecdc4b45f74e7" title="Closes the connection.">close</a>();
+<a name="l00054"></a>00054         <a class="code" href="classerizo_1_1WebRtcConnection.html" title="A WebRTC Connection.">WebRtcConnection</a>* <a class="code" href="classerizo_1_1NiceConnection.html#ae2d1e7b2395280f860ce8a5ccad00d74" title="Obtains the associated WebRtcConnection.">getWebRtcConnection</a>();
+<a name="l00060"></a>00060         <span class="keywordtype">bool</span> <a class="code" href="classerizo_1_1NiceConnection.html#ab8229fd03ba8f9164bf1d0116afc34ad" title="Sets the remote ICE Candidates.">setRemoteCandidates</a>(std::vector&lt;CandidateInfo&gt; &amp;candidates);
+<a name="l00065"></a>00065         <span class="keywordtype">void</span> <a class="code" href="classerizo_1_1NiceConnection.html#a730edce6e46f10bd33751b913d5071c0" title="Sets the associated WebRTCConnection.">setWebRtcConnection</a>(<a class="code" href="classerizo_1_1WebRtcConnection.html" title="A WebRTC Connection.">WebRtcConnection</a> *connection);
+<a name="l00072"></a>00072         <span class="keywordtype">int</span> <a class="code" href="classerizo_1_1NiceConnection.html#a9e445cb17e5d2cc8abf055aa20d713fd" title="Sends data via the ICE Connection.">sendData</a>(<span class="keywordtype">void</span>* buf, <span class="keywordtype">int</span> len);
+<a name="l00073"></a>00073 
+<a name="l00077"></a><a class="code" href="classerizo_1_1NiceConnection.html#a2b8e182b625b689fab45d5a1d4741791">00077</a>         <a class="code" href="namespaceerizo.html#aea65e818bea8a0ed842ab23502fc3d94" title="Channel types.">MediaType</a> <a class="code" href="classerizo_1_1NiceConnection.html#a2b8e182b625b689fab45d5a1d4741791" title="The MediaType of the connection.">mediaType</a>;
+<a name="l00081"></a><a class="code" href="classerizo_1_1NiceConnection.html#a6af8df1bdc36c4e96208cd140dd5d1aa">00081</a>         std::string *<a class="code" href="classerizo_1_1NiceConnection.html#a6af8df1bdc36c4e96208cd140dd5d1aa" title="The transport name.">transportName</a>;
+<a name="l00085"></a><a class="code" href="classerizo_1_1NiceConnection.html#a0fd7da1a62deae71f6f3407d01887f7e">00085</a>         <a class="code" href="namespaceerizo.html#a123302796ddc186255462e85eb7efbe4" title="States of ICE.">IceState</a> <a class="code" href="classerizo_1_1NiceConnection.html#a0fd7da1a62deae71f6f3407d01887f7e" title="The state of the ice Connection.">iceState</a>;
+<a name="l00089"></a><a class="code" href="classerizo_1_1NiceConnection.html#a23eff29b943707e8890d7f00a51a81dc">00089</a>         std::vector&lt;CandidateInfo&gt;* <a class="code" href="classerizo_1_1NiceConnection.html#a23eff29b943707e8890d7f00a51a81dc" title="The Obtained local candidates.">localCandidates</a>;
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091         <span class="keywordtype">void</span> <a class="code" href="classerizo_1_1NiceConnection.html#aeb4bccb404c0728d42ad7962e793ad17">updateIceState</a>(<a class="code" href="namespaceerizo.html#a123302796ddc186255462e85eb7efbe4" title="States of ICE.">IceState</a> state);
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094 <span class="keyword">private</span>:
+<a name="l00095"></a>00095         <span class="keywordtype">void</span> init();
+<a name="l00096"></a>00096         <a class="code" href="NiceConnection_8h.html#a27eb0369d646fce15b98e243696cd0b6">NiceAgent</a>* agent_;
+<a name="l00097"></a>00097         <a class="code" href="classerizo_1_1WebRtcConnection.html" title="A WebRTC Connection.">WebRtcConnection</a>* conn_;
+<a name="l00098"></a>00098         <a class="code" href="NiceConnection_8h.html#a3ead78d8af9314b69b993ba395806890">GMainLoop</a>* loop_;
+<a name="l00099"></a>00099         boost::thread m_Thread_;
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101 };
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103 } <span class="comment">/* namespace erizo */</span>
+<a name="l00104"></a>00104 <span class="preprocessor">#endif </span><span class="comment">/* NICECONNECTION_H_ */</span>
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="NiceConnection_8h.html">NiceConnection.h</a>      </li>
-      <li class="footer">Generated on Mon Jun 25 2012 13:12:11 for ERIZO by&#160;
+      <li class="footer">Generated on Wed Jul 18 2012 17:15:09 for ERIZO by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -184,7 +187,7 @@ function toggleVisibility(linkObj) {
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">

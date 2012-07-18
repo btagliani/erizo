@@ -8,11 +8,13 @@ var NAVTREE =
       [ "erizo::NiceConnection", "classerizo_1_1NiceConnection.html", null ],
       [ "erizo::NiceReceiver", "classerizo_1_1NiceReceiver.html", null ],
       [ "erizo::OneToManyProcessor", "classerizo_1_1OneToManyProcessor.html", null ],
+      [ "erizo::packet", "structerizo_1_1packet.html", null ],
       [ "erizo::rtcpheader", "structerizo_1_1rtcpheader.html", null ],
       [ "erizo::rtpheader", "structerizo_1_1rtpheader.html", null ],
       [ "erizo::SdpInfo", "classerizo_1_1SdpInfo.html", null ],
       [ "erizo::SrtpChannel", "classerizo_1_1SrtpChannel.html", null ],
-      [ "erizo::WebRtcConnection", "classerizo_1_1WebRtcConnection.html", null ]
+      [ "erizo::WebRtcConnection", "classerizo_1_1WebRtcConnection.html", null ],
+      [ "erizo::WebRtcConnectionStateListener", "classerizo_1_1WebRtcConnectionStateListener.html", null ]
     ] ],
     [ "Class Index", "classes.html", null ],
     [ "Class Hierarchy", "hierarchy.html", [
@@ -26,10 +28,12 @@ var NAVTREE =
       [ "erizo::NiceReceiver", "classerizo_1_1NiceReceiver.html", [
         [ "erizo::WebRtcConnection", "classerizo_1_1WebRtcConnection.html", null ]
       ] ],
+      [ "erizo::packet", "structerizo_1_1packet.html", null ],
       [ "erizo::rtcpheader", "structerizo_1_1rtcpheader.html", null ],
       [ "erizo::rtpheader", "structerizo_1_1rtpheader.html", null ],
       [ "erizo::SdpInfo", "classerizo_1_1SdpInfo.html", null ],
-      [ "erizo::SrtpChannel", "classerizo_1_1SrtpChannel.html", null ]
+      [ "erizo::SrtpChannel", "classerizo_1_1SrtpChannel.html", null ],
+      [ "erizo::WebRtcConnectionStateListener", "classerizo_1_1WebRtcConnectionStateListener.html", null ]
     ] ],
     [ "Class Members", "functions.html", null ],
     [ "Namespace List", "namespaces.html", [

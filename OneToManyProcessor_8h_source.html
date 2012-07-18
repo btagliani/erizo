@@ -135,30 +135,32 @@ function toggleVisibility(linkObj) {
 <a name="l00015"></a>00015 
 <a name="l00020"></a><a class="code" href="classerizo_1_1OneToManyProcessor.html">00020</a> <span class="keyword">class </span><a class="code" href="classerizo_1_1OneToManyProcessor.html" title="Represents a One to Many connection.">OneToManyProcessor</a> : <span class="keyword">public</span> <a class="code" href="classerizo_1_1MediaReceiver.html" title="A MediaReceiver is any class that can receive audio or video data.">MediaReceiver</a> {
 <a name="l00021"></a>00021 <span class="keyword">public</span>:
-<a name="l00022"></a>00022         <a class="code" href="classerizo_1_1OneToManyProcessor.html#aef2b16a2a34012d86626fd1a3d472c7c">OneToManyProcessor</a>();
-<a name="l00023"></a>00023         <span class="keyword">virtual</span> <a class="code" href="classerizo_1_1OneToManyProcessor.html#a6d9f74c0f7c4ace31845ffc2fba8afcd">~OneToManyProcessor</a>();
-<a name="l00028"></a>00028         <span class="keywordtype">void</span> <a class="code" href="classerizo_1_1OneToManyProcessor.html#ae133706322229c6c1747694fd9aaaae7" title="Sets the Publisher.">setPublisher</a>(<a class="code" href="classerizo_1_1WebRtcConnection.html" title="A WebRTC Connection.">WebRtcConnection</a>* webRtcConn);
-<a name="l00034"></a>00034         <span class="keywordtype">void</span> <a class="code" href="classerizo_1_1OneToManyProcessor.html#afe9e70c313472fea0351ae5fa3ea5b22" title="Sets the subscriber.">addSubscriber</a>(<a class="code" href="classerizo_1_1WebRtcConnection.html" title="A WebRTC Connection.">WebRtcConnection</a>* webRtcConn, <span class="keywordtype">int</span> peerId);
-<a name="l00039"></a>00039         <span class="keywordtype">void</span> <a class="code" href="classerizo_1_1OneToManyProcessor.html#ab577457a3008f2e074046f10b2eb1e24" title="Eliminates the subscriber given its peer id.">removeSubscriber</a>(<span class="keywordtype">int</span> peerId);
-<a name="l00040"></a>00040         <span class="keywordtype">int</span> <a class="code" href="classerizo_1_1OneToManyProcessor.html#a11831344d667d011fe06a69dcd2a98bf">receiveAudioData</a>(<span class="keywordtype">char</span>* buf, <span class="keywordtype">int</span> len);
-<a name="l00041"></a>00041         <span class="keywordtype">int</span> <a class="code" href="classerizo_1_1OneToManyProcessor.html#a4a2f98e8b09d3165d2a3b01132257b8b">receiveVideoData</a>(<span class="keywordtype">char</span>* buf, <span class="keywordtype">int</span> len);
-<a name="l00042"></a>00042 
-<a name="l00043"></a><a class="code" href="classerizo_1_1OneToManyProcessor.html#a3252da35dcfe182433b6707520e22ff7">00043</a>         <a class="code" href="classerizo_1_1WebRtcConnection.html" title="A WebRTC Connection.">WebRtcConnection</a> *<a class="code" href="classerizo_1_1OneToManyProcessor.html#a3252da35dcfe182433b6707520e22ff7">publisher</a>;
-<a name="l00044"></a><a class="code" href="classerizo_1_1OneToManyProcessor.html#a80d7a4cf2b5a804672ec401f8d2de02f">00044</a>         std::map&lt;int, WebRtcConnection*&gt; <a class="code" href="classerizo_1_1OneToManyProcessor.html#a80d7a4cf2b5a804672ec401f8d2de02f">subscribers</a>;
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046 <span class="keyword">private</span>:
-<a name="l00047"></a>00047         <span class="keywordtype">char</span>* sendVideoBuffer_;
-<a name="l00048"></a>00048         <span class="keywordtype">char</span>* sendAudioBuffer_;
-<a name="l00049"></a>00049 };
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 } <span class="comment">/* namespace erizo */</span>
-<a name="l00052"></a>00052 <span class="preprocessor">#endif </span><span class="comment">/* ONETOMANYPROCESSOR_H_ */</span>
+<a name="l00022"></a><a class="code" href="classerizo_1_1OneToManyProcessor.html#a3252da35dcfe182433b6707520e22ff7">00022</a>         <a class="code" href="classerizo_1_1WebRtcConnection.html" title="A WebRTC Connection.">WebRtcConnection</a> *<a class="code" href="classerizo_1_1OneToManyProcessor.html#a3252da35dcfe182433b6707520e22ff7">publisher</a>;
+<a name="l00023"></a><a class="code" href="classerizo_1_1OneToManyProcessor.html#a80d7a4cf2b5a804672ec401f8d2de02f">00023</a>         std::map&lt;int, WebRtcConnection*&gt; <a class="code" href="classerizo_1_1OneToManyProcessor.html#a80d7a4cf2b5a804672ec401f8d2de02f">subscribers</a>;
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025         <a class="code" href="classerizo_1_1OneToManyProcessor.html#aef2b16a2a34012d86626fd1a3d472c7c">OneToManyProcessor</a>();
+<a name="l00026"></a>00026         <span class="keyword">virtual</span> <a class="code" href="classerizo_1_1OneToManyProcessor.html#a6d9f74c0f7c4ace31845ffc2fba8afcd">~OneToManyProcessor</a>();
+<a name="l00031"></a>00031         <span class="keywordtype">void</span> <a class="code" href="classerizo_1_1OneToManyProcessor.html#ae133706322229c6c1747694fd9aaaae7" title="Sets the Publisher.">setPublisher</a>(<a class="code" href="classerizo_1_1WebRtcConnection.html" title="A WebRTC Connection.">WebRtcConnection</a>* webRtcConn);
+<a name="l00037"></a>00037         <span class="keywordtype">void</span> <a class="code" href="classerizo_1_1OneToManyProcessor.html#afe9e70c313472fea0351ae5fa3ea5b22" title="Sets the subscriber.">addSubscriber</a>(<a class="code" href="classerizo_1_1WebRtcConnection.html" title="A WebRTC Connection.">WebRtcConnection</a>* webRtcConn, <span class="keywordtype">int</span> peerId);
+<a name="l00042"></a>00042         <span class="keywordtype">void</span> <a class="code" href="classerizo_1_1OneToManyProcessor.html#ab577457a3008f2e074046f10b2eb1e24" title="Eliminates the subscriber given its peer id.">removeSubscriber</a>(<span class="keywordtype">int</span> peerId);
+<a name="l00043"></a>00043         <span class="keywordtype">int</span> <a class="code" href="classerizo_1_1OneToManyProcessor.html#a11831344d667d011fe06a69dcd2a98bf">receiveAudioData</a>(<span class="keywordtype">char</span>* buf, <span class="keywordtype">int</span> len);
+<a name="l00044"></a>00044         <span class="keywordtype">int</span> <a class="code" href="classerizo_1_1OneToManyProcessor.html#a4a2f98e8b09d3165d2a3b01132257b8b">receiveVideoData</a>(<span class="keywordtype">char</span>* buf, <span class="keywordtype">int</span> len);
+<a name="l00048"></a>00048         <span class="keywordtype">void</span> <a class="code" href="classerizo_1_1OneToManyProcessor.html#afd024cf7e13a3a7fd0f21c8822403d1b" title="Closes all the subscribers and the publisher, the object is useless after this.">closeAll</a>();
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 <span class="keyword">private</span>:
+<a name="l00051"></a>00051         <span class="keywordtype">char</span>* sendVideoBuffer_;
+<a name="l00052"></a>00052         <span class="keywordtype">char</span>* sendAudioBuffer_;
+<a name="l00053"></a>00053         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sentPackets_;
+<a name="l00054"></a>00054 };
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 } <span class="comment">/* namespace erizo */</span>
+<a name="l00057"></a>00057 <span class="preprocessor">#endif </span><span class="comment">/* ONETOMANYPROCESSOR_H_ */</span>
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="OneToManyProcessor_8h.html">OneToManyProcessor.h</a>      </li>
-      <li class="footer">Generated on Mon Jun 25 2012 13:12:11 for ERIZO by&#160;
+      <li class="footer">Generated on Wed Jul 18 2012 17:15:09 for ERIZO by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -168,7 +170,7 @@ function toggleVisibility(linkObj) {
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
